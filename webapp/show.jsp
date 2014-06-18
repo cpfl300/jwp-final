@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%><%@ include file="/include/tags.jspf"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,18 +53,34 @@
 	    <h3>
 	        댓글 수 : ${question.countOfComment}
 	    </h3>
+	    
+	    <c:forEach var="attach" items="${answers}">
 	        <div class="comment">
 	            <div class="comment-metadata">
-	                <span class="comment-author">by Toby Lee,</span>
+	                <span class="comment-author">${attach.writer},</span>
 	                <span class="comment-date">
-	                    2014-06-17 16:40:54
+	                     ${attach.createdDate}
 	                </span>
 	            </div>
 	            <div class="comment-content">
 	                <div class="about">내용 : </div>
-	                람다식에서 사용되는 변수라면 람다식 내부에서 정의된 로컬 변수이거나 람다식이 선언된 외부의 변수를 참조하는 것일텐데, 전자라면 아무리 변경해도 문제될 이유가 없고, 후자는 변경 자체가 허용이 안될텐데. 이 설명이 무슨 뜻인지 이해가 안 됨.
+	                  ${attach.contents}
 	            </div>
 	        </div>	    
+	    </c:forEach>
+	    
+	    				
+	    
+	    
+	    
+	    
+	        
+	        
+	        
+	        
+	        
+	        
+	        
 	    
 	        <div class="comment">
 	            <div class="comment-metadata">
