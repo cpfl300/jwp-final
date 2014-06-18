@@ -8,12 +8,13 @@ import next.model.Question;
 import core.mvc.Controller;
 
 public class SaveController implements Controller {
-	private QuestionDao questionDao = new QuestionDao();
 	
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 	
+		QuestionDao questionDao = new QuestionDao();
+		
 		String writer = request.getParameter("writer");
 		String title = request.getParameter("title");
 		String contents = request.getParameter("contents");

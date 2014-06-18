@@ -11,12 +11,12 @@ import core.mvc.Controller;
 
 public class CommentController implements Controller {
 
-	private QuestionDao questionDao = new QuestionDao();
-	private AnswerDao answerDao = new AnswerDao(); 
 	
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
+		QuestionDao questionDao = new QuestionDao();
+		AnswerDao answerDao = new AnswerDao(); 
 		
 		String questionId = request.getParameter("questionId");
 		String writer = request.getParameter("writer");

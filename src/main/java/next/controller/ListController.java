@@ -10,12 +10,13 @@ import next.model.Question;
 import core.mvc.Controller;
 
 public class ListController implements Controller {
-	private QuestionDao questionDao = new QuestionDao();
-	private List<Question> questions;
 	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+		QuestionDao questionDao = new QuestionDao();
+		List<Question> questions;
+		
 		questions = questionDao.findAll();
 		request.setAttribute("questions", questions);
 		return "list.jsp";
