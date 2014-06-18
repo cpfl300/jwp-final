@@ -68,37 +68,6 @@
 	            </div>
 	        </div>	    
 	    </c:forEach>
-	    
-	    				
-	    
-	    
-	    
-	    
-	        
-	        
-	        
-	        
-	        
-	        
-	        
-	    
-	        <div class="comment">
-	            <div class="comment-metadata">
-	                <span class="comment-author">by 강우,</span>
-	                <span class="comment-date">
-	                    2014-06-17 16:40:54
-	                </span>
-	            </div>
-	            <div class="comment-content">
-	                <div class="about">내용 : </div>
-	                저도 잘은 모르겠지만, 그냥 몇글자 적어볼께요.
-					일단 변수의 생명 주기랑, 값이 아닌 레퍼런스에 의한 부수효과는 무시하고,
-					쓰레드 관점에서만 볼때에,
-					간단히 생각하면, 서블릿에서 인스턴스 변수를 사용하는 것은 쓰레드에 안전할까요? 안전하지 않을까요?
-					저는 같은 맥락인거 같은데 ^^;;
-					아 그러고 보니 "안정"이라고 되어있네요. 저건 다른 의미인가.. ^^;;
-	            </div>
-	        </div>	    
 	</div>
 	<!-- comments end -->
 	
