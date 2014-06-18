@@ -12,8 +12,8 @@ import next.dao.QuestionDao;
 import next.model.Question;
 import core.mvc.Controller;
 
-public class ListController implements Controller {
-	
+public class ApiListController implements Controller{
+
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
@@ -21,7 +21,12 @@ public class ListController implements Controller {
 		List<Question> questions;
 		
 		questions = questionDao.findAll();
-		request.setAttribute("questions", questions);
-		return "list.jsp";
+		
+		PrintWriter out = null;
+		out = response.getWriter();
+		Gson gson = new Gson();
+		out.println(gson.toJson(questions));
+		return "api";
 	}
+
 }
